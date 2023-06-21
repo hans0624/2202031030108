@@ -1,0 +1,214 @@
+<html>
+
+<head><center>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+   
+  
+    label {
+        font-size: x-large;
+    }
+
+    input {
+        font-size: x-large;
+    }
+
+    form {
+        text-align: center;
+    }
+
+  
+</style>
+
+    <body>
+    <div>
+        <table border="1">
+    <form>
+
+        
+
+            <tr>
+                <td>
+                    <b>
+                        <center>Registration Form</center>
+                    </b>
+                </tr>
+            </td>
+            <tr>
+                <td>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br></div>
+                    </head> </label>
+                </tr>
+            </td>
+
+            <tr>
+                <td><label for="mname">Middle name:</label>
+                    <input type="text" id="mname" name="mname"><br><br>
+                </tr>
+            </td>
+            <tr>
+                <td><label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                </tr>
+            </td>
+            <tr>
+                <td><label for="lname">Username:</label>
+                    <input type="text" id="uname" name="uname"><br><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+                </tr>
+            </td>
+            <tr>
+                <td><label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+                </tr>
+            </td>
+            <tr>
+                <td>
+                    <label for="contact">Contact no.:</label>
+                    <select name="contact" id="contact">
+                        <optgroup label="Country code">
+                            <option value="india">+91 (INDIA)</option>
+                            <option value="usa">+1 (USA)</option>
+                            <option value="germany">+49 (GERMANY)</option>
+                            <input type="contact" id="contact" name="contact"><br><br>
+                        </optgroup>
+
+                </tr>
+            </td>
+
+            <tr>    
+                <td> <label for="address">Current Address:</label>
+                    <textarea id="address" name="caddress" height="10" width="10"></textarea><br>
+                </tr>
+            </td>
+            <tr>
+                <td><label for="address">Permenant Address:</label>
+                    <textarea id="address" name="paddress" height="10" width="10"></textarea><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="gender">Gender :</label>
+                    <input type="radio" id="male" name="Gender" value="male">
+                      <label for="male">Male</label>
+                      <input type="radio" id="female" name="Gender" value="female">
+                      <label for="css">Female</label><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="DOB">Date of Birth:</label>
+                    <input type="date" id="DOB" name="DOB"><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="skills">Skills:</label>
+                    <input type="checkbox" id="skill1" name="skill1" value="java">
+                    <label for="skill1"> JAVA</label>
+                    <input type="checkbox" id="skill2" name="skill2" value="c">
+                    <label for="skill2">C</label><br>
+                    <input type="checkbox" id="skill3" name="skill3" value="python">
+                    <label for="skill3">PYTHON</label>
+                    <input type="checkbox" id="skill4" name="skill4" value="c++">
+                    <label for="skill4">C++</label><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="gender">Questions</label><br>
+                    <label for="Q1">Your Favourite Color:</label>
+                    <input type="text" id="Q1" name="Q1"><br>
+                    <label for="Q2">Your Favourite Fruit:</label>
+                    <input type="text" id="Q2" name="Q2"><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="psw">Password</label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                    <label for="psw-repeat">Repeat Password</label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><br>
+                </tr>
+            </td>
+            <tr>
+                <td> <label for="address">Query:</label>
+                    <textarea id="query" name="query" height="10" width="10"></textarea><br>
+                </tr>
+            </tr>
+            <tr>
+                <td> <label for="Photo">Passportsize photo:</label>
+                    <input type="file" id="photo" name="photo"><br>
+                </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="tc" name="tc" value="tc">
+                    <label for="tc">Terms & Condition</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td><button type="submit" form="form1" value="Submit">Submit</button></td>
+            </tr>
+        </form>
+    </div>
+        </body>
+
+ 
+
+    </center>
+</head>
+</html>
+<script>
+    let saveFile = () => {
+        // Get the data from each element on the form.
+        const fname = document.getElementById("fname");
+        const lname = document.getElementById("ltname");
+        const mname = document.getElementById("mname");
+        const email = document.getElementById("email");
+        const contact = document.getElementById("contact");
+        const gender = document.getElementById("gender");
+        const dob = document.getElementById("DOB"); 2
+        const q1 = document.getElementById("Q1");
+        const q2 = document.getElementById("Q2");
+        const password = document.getElementById("psw");
+        const confirmpassword = document.getElementById("psw-repeat");
+        const address = document.getElementById("address");
+        const tc = document.getElementById("T&C");
+        const file = document.getElementById("photo");
+
+        // This variable stores all the data.
+        let data = "\r First Name: " + fname.value + " \r\n " + "Middle Name: " + mname.value + " \r\n " + "Last Name: " + lname.value + " \r\n " + "Email: " + email.value + " \r\n " + "Phone: " + phone.value + " \r\n " + "Gender: " + gender.value + " \r\n " + "Age: " + age.value + " \r\n " + "Date of Birth: " + dob.value + " \r\n " + "Question 1: " + favfood.value + " \r\n " + "Hobby: " + hobby.value + " \r\n " + "Password: " + password.value + " \r\n " + "Confirm Password: " + confirmpassword.value + " \r\n " + "Address: " + address.value + " \r\n " + "Pincode: " + pincode.value + " \r\n " + "T&C: " + tc.value + " \r\n " + "File: " + file.value;
+        console.log(data); //printing form data into the console
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: "text/plain" });
+        var filename = new Date();
+        var month = new Date(); //months from 1-12
+        month = month.getMonth();
+
+        var day = new Date();
+        var day = day.getUTCDate();
+
+        var year = new Date();
+        var year = year.getUTCFullYear();
+
+        newdate = year + "/" + month + "/" + day;
+        const sFileName = filename; // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = new Date();
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        } else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click();
+    };
+</script>
