@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitwise Operator Example</title>
+</head>
+<body>
+    <input type="text" id="firstInput" placeholder="Enter the first value">
+    <input type="text" id="secondInput" placeholder="Enter the second value">
+    <button onclick="performBitwiseOperations()">Perform Bitwise Operations</button>
+
+    <script>
+        function performBitwiseOperations() {
+            var firstValue = document.getElementById("firstInput").value;
+            var secondValue = document.getElementById("secondInput").value;
+
+            var bitwiseAnd = firstValue & secondValue;
+            var bitwiseOr = firstValue | secondValue;
+            var bitwiseXor = firstValue ^ secondValue;
+            var bitwiseNotFirst = ~firstValue;
+            var bitwiseNotSecond = ~secondValue;
+
+            // Display the results
+            alert("Bitwise AND: " + bitwiseAnd + "\n"
+                + "Bitwise OR: " + bitwiseOr + "\n"
+                + "Bitwise XOR: " + bitwiseXor + "\n"
+                + "Bitwise NOT (First): " + bitwiseNotFirst + "\n"
+                + "Bitwise NOT (Second): " + bitwiseNotSecond);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ternary Operator Example</title>
+</head>
+<body>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check Number</button>
+
+    <script>
+        function checkNumber() {
+            var userInput = document.getElementById("numberInput").value;
+            var number = parseInt(userInput);
+
+            var isEven = (number % 2 === 0) ? "Even" : "Odd";
+
+            // Display the result
+            alert("The number is " + isEven);
+        }
+    </script>
+</body>
+</html>

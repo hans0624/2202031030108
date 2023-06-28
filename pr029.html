@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logical Operator Example</title>
+</head>
+<body>
+    <button onclick="checkLogic()">Check Logic</button>
+
+    <script>
+        function checkLogic() {
+            var x = 5;
+            var y = 10;
+
+            // Using logical operators
+            var result1 = (x > 3) && (y < 20);   // Logical AND
+            var result2 = (x > 3) || (y < 20);   // Logical OR
+            var result3 = !(x == y);             // Logical NOT
+
+            // Display the results
+            alert("Result 1: " + result1 + "\n"
+                + "Result 2: " + result2 + "\n"
+                + "Result 3: " + result3);
+        }
+    </script>
+</body>
+</html>

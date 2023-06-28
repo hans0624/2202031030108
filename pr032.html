@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Operator Example</title>
+</head>
+<body>
+    <input type="text" id="firstInput" placeholder="Enter the first value">
+    <input type="text" id="secondInput" placeholder="Enter the second value">
+    <button onclick="compareValues()">Compare Values</button>
+
+    <script>
+        function compareValues() {
+            var firstValue = document.getElementById("firstInput").value;
+            var secondValue = document.getElementById("secondInput").value;
+
+            // Compare the values using comparison operators
+            var isEqual = (firstValue == secondValue);
+            var isGreater = (firstValue > secondValue);
+            var isLess = (firstValue < secondValue);
+
+            // Display the results
+            alert("Equal: " + isEqual + "\n"
+                + "Greater: " + isGreater + "\n"
+                + "Less: " + isLess);
+        }
+    </script>
+</body>
+</html>
