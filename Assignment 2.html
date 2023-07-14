@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #00e5ff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-container input[type="text"],
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .form-container button {
+      background-color: #010954;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .star-rating {
+      border:solid 1px #ccc;
+      display:flex;
+      flex-direction: row-reverse;
+      font-size:1.5em;
+      justify-content:space-around;
+      padding:0 .2em;
+      text-align:center;
+      width:5em;
+    }
+    
+    .star-rating input {
+      display:none;
+    }
+    
+    .star-rating label {
+      color:#000045;
+      cursor:pointer;
+    }
+    
+    .star-rating :checked ~ label {
+      color:rgb(255, 238, 0);
+    }
+    
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color:rgb(255, 255, 0);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Resturant Feedback Form</h2>
+    <form id="feedback-form">
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="cars">Rating </label>
+
+      <div class="star-rating">
+        <input type="radio" id="5-stars" name="rating" value="5" />
+    
+        <label for="5-stars" class="star">&#9733;</label>
+        <input type="radio" id="4-stars" name="rating" value="4" />
+        <label for="4-stars" class="star">&#9733;</label>
+        <input type="radio" id="3-stars" name="rating" value="3" />
+        <label for="3-stars" class="star">&#9733;</label>
+        <input type="radio" id="2-stars" name="rating" value="2" />
+        <label for="2-stars" class="star">&#9733;</label>
+        <input type="radio" id="1-star" name="rating" value="1" />
+        <label for="1-star" class="star">&#9733;</label>
+      </div>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Form submission
+      $("#feedback-form").submit(function(event) {
+        event.preventDefault(); // Prevent form from submitting
+        
+        // Get form data
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+        
+        // Display a confirmation dialog
+        $("<div title='Feedback Submitted'>Thank you for your feedback!</div>").dialog({
+          modal: true,
+          buttons: {
+            Ok: function() {
+              $(this).dialog("close");
+              // Reset the form
+              $("#feedback-form")[0].reset();
+            }
+          }
+        });
+        
+        // TODO: Handle form submission (e.g., send data to a server)
+        // You can use AJAX to send the form data to the server
+        
+        // Example AJAX request (uncomment and modify accordingly)
+        
+        $.ajax({
+          type: "POST",
+          url: "your-server-url",
+          data: {
+            name: name,
+            email: email,
+            message: message
+          },
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(error) {
+            console.error(error);
+          }
+        });
+        
+      });
+    });
+  </script>
+</body>
+</html>
